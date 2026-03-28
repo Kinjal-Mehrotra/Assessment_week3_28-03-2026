@@ -35,10 +35,13 @@ Performing Myntra Automation
     #selecting color filter
     Click Element    xpath=//input[@value="Pink"]/following-sibling::div
 
+    #Storing product brand and description
     ${product_Brand}=  Get Text    //div[@class="search-searchProductsContainer row-base"]/descendant::h3
     ${product_Desc}=  Get Text    //div[@class="search-searchProductsContainer row-base"]/descendant::h4
 
+    #printing to console
     Log To Console    ${product_Brand} ${product_Desc}
 
+    #Closing browser
     Close Browser
 
