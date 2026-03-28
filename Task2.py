@@ -40,9 +40,8 @@ driver.switch_to.window(all_windows[-1])
 
 #getting the product details
 product_name=wait.until(ec.presence_of_element_located((By.XPATH,'//h1[@class="product-title title mb-0 h2"]')))
-print("Product name: ", product_name.text)
 product_price=wait.until(ec.presence_of_element_located((By.XPATH,'//span[@class="money buckscc-money"]')))
-print("Product price: ", product_price.text)
+print("Product name-", product_name.text,":","Product price-", product_price.text )
 
 sleep(5)
 driver.quit()
